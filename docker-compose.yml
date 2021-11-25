@@ -2,17 +2,17 @@
 version: "3"
 services:
   notebook:
-    # https://hub.docker.com/r/jupyter/datascience-notebook‚©‚çimage‚ğpull‚·‚é
+    # https://hub.docker.com/r/jupyter/datascience-notebookã‹ã‚‰imageã‚’pullã™ã‚‹
     image: jupyter/datascience-notebook
-    # ƒ|[ƒg‚Ìİ’è("ƒzƒXƒgFƒRƒ“ƒeƒi")
+    # ãƒãƒ¼ãƒˆã®è¨­å®š("ãƒ›ã‚¹ãƒˆï¼šã‚³ãƒ³ãƒ†ãƒŠ")
     ports:
       - "8888:8888"
-    # ŠÂ‹«•Ï”‚Ìİ’è
+    # ç’°å¢ƒå¤‰æ•°ã®è¨­å®š
     environment:
       - JUPYTER_ENABLE_LAB=yes
-    # ƒ{ƒŠƒ…[ƒ€(ƒf[ƒ^‚Ì‰i‘±‰»‚ÌêŠ)‚Ìİ’è(ƒzƒXƒg:ƒRƒ“ƒeƒi)
-    # ƒzƒXƒg“à‚ÌworkƒfƒBƒŒƒNƒgƒŠ‚ÆƒRƒ“ƒeƒi“à‚Ì/home/jovyan/workƒfƒBƒŒƒNƒgƒŠ‚ª•R‚Ã‚¢‚Ä‚¢‚éƒCƒ[ƒW
+    # ãƒœãƒªãƒ¥ãƒ¼ãƒ (ãƒ‡ãƒ¼ã‚¿ã®æ°¸ç¶šåŒ–ã®å ´æ‰€)ã®è¨­å®š(ãƒ›ã‚¹ãƒˆ:ã‚³ãƒ³ãƒ†ãƒŠ)
+    # ãƒ›ã‚¹ãƒˆå†…ã®workãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã¨ã‚³ãƒ³ãƒ†ãƒŠå†…ã®/home/jovyan/workãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãŒç´ã¥ã„ã¦ã„ã‚‹ã‚¤ãƒ¡ãƒ¼ã‚¸
     volumes:
       - ./work/:/home/jovyan/work
-    # ÅŒã‚ÉjupyterLab‚ÉÚ‘±‚·‚é‚½‚ß‚ÌƒRƒ}ƒ“ƒh‚ğÀs‚·‚éB
+    # æœ€å¾Œã«jupyterLabã«æ¥ç¶šã™ã‚‹ãŸã‚ã®ã‚³ãƒãƒ³ãƒ‰ã‚’å®Ÿè¡Œã™ã‚‹ã€‚
     command: start-notebook.sh --NotebookApp.token=''
