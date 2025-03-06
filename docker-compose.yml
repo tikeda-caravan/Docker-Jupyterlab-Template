@@ -13,6 +13,6 @@ services:
     # ボリューム(データの永続化の場所)の設定(ホスト:コンテナ)
     # ホスト内のworkディレクトリとコンテナ内の/home/jovyan/workディレクトリが紐づいているイメージ
     volumes:
-      - ${PWD}/work/:/home/jovyan/work
+      - ./work:/home/jovyan/work
     # 最後にjupyterLabに接続するためのコマンドを実行する。
     command: start-notebook.sh --NotebookApp.token=''
